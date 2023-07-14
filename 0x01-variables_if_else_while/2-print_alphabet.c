@@ -1,12 +1,14 @@
 #include<stdio.h>
 
 /**
-*Main prints letters of the alphabet
-*returns 0 if it is a success
+*Main - prints letters of the alphabet from a-z
+*
+*returns- 0 if it is a success
 */
 int main(void)
 {
 	char alphabets = 'a';
+
 	while (alphabets <= 'z')
 	{
 		putchar(alphabets);
