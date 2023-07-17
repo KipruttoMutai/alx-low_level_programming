@@ -1,28 +1,26 @@
 #include<stdio.h>
 
 /**
- * Main - entry point
- *
- * Description -prints all possible different combinations of three digits
+ * Main - entry point Description -prints all possible different combinations of three digits
  *
  * Returns 0 -Success
  */
 int main(void)
-{
-	int a, b, c;
-
-	for (a = 48; a < 58; a++)
 	{
-		for (b = 49; b < 58; b++)
+	int n, m, l;
+
+	for (n = 48; n < 58; n++)
+	{
+		for (m = 49; m < 58; m++)
 		{
-			for (c = 50; c < 58; c++)
+			for (l = 50; l < 58; l++)
 			{
-				if (c > b && b > a)
+				if (l > m && m > n)
 				{
-					putchar(a);
-					putchar(b);
-					putchar(c);
-					if (c != 55 || b != 56)
+					putchar(n);
+					putchar(m);
+					putchar(l);
+					if (n != 55 || m != 56)
 					{
 						putchar(',');
 						putchar(' ');
