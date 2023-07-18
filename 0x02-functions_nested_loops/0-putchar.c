@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * main-Entry point to print _putchar
+ * main - print _putchar
  * Description -  prints _putchar, followed by a new line
- * Return 0 :Sucess
+ * return 0: Sucess
  */
 int main(void)
 {
