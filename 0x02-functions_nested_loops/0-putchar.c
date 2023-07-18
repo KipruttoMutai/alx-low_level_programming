@@ -1,8 +1,8 @@
 #include "main.h"
 /**
  * main - print _putchar
- * Description -  prints _putchar, followed by a new line
- * return 0: Sucess
+ * Description followed by a new line
+ * Return: 0
  */
 int main(void)
 {
