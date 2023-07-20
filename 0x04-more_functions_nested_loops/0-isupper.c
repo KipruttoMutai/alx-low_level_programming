@@ -4,13 +4,13 @@
 /*
  * Main -entry point
  * Description:checks for uppercase character
- * Return - 0 alwas success
- * */
+ * Return - 0 always success
+ */
 
 int _isupper(int c)
 {
 	if (c >= 'A' &&  c <= 'Z')
-		return 1;
+		return (1);
 	else
-		return 0;
+		return (0);
 }
