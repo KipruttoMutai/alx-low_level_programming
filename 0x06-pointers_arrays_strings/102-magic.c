@@ -1,4 +1,12 @@
 #include <stdio.h>
+#include "main.h"
+
+/**
+ * line of code that adds 98
+ * @n: integer params
+ * Return: 0
+ */
+
 
 int main(void)
 {
