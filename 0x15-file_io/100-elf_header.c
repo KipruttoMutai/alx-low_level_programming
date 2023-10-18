@@ -54,7 +54,7 @@ void printMagicNumbers(unsigned char *headerData)
  */
 void printHeaderClass(unsigned char *headerData)
 {
-	printf(" Class: ");
+	printf(" Class:\t\t\t");
 
 	switch (headerData[EI_CLASS])
 	{
@@ -261,7 +261,7 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	fileDescriptor = open(argv[1], O_RDONLY);
 	if (fileDescriptor == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read file %s\n", argv[1]);
+		dprintf(STDERR_FILENO, "Error: Can't open file %s\n", argv[1]);
 		exit(98);
 	}
 
@@ -269,7 +269,7 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	if (header == NULL)
 	{
 		closeFile(fileDescriptor);
-		dprintf(STDERR_FILENO, "Error: Can't read file %s\n", argv[1]);
+		dprintf(STDERR_FILENO, "Error: Memory allocation failed\n");
 		exit(98);
 	}
 
@@ -278,7 +278,7 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	{
 		free(header);
 		closeFile(fileDescriptor);
-		dprintf(STDERR_FILENO, "Error: `%s`: No such file\n", argv[1]);
+		dprintf(STDERR_FILENO, "Error: Can't read file %s\n", argv[1]);
 		exit(98);
 	}
 
