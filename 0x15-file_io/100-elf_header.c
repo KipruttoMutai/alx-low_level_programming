@@ -252,6 +252,12 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	Elf64_Ehdr *header;
 	int fileDescriptor, readResult;
 
+	if (argc != 2)
+	{
+		dprintf(STDERR_FILENO, "Usage: %s elf_filename\n", argv[0]);
+		exit(98);
+	}
+
 	fileDescriptor = open(argv[1], O_RDONLY);
 	if (fileDescriptor == -1)
 	{
